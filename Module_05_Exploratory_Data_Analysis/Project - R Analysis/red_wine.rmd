@@ -1,4 +1,4 @@
-Red Red Wine by Laura Yoshizawa
+Red Red Wine
 ========================================================
 
 ```{r init, include=FALSE}
