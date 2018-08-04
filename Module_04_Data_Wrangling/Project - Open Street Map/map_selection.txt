@@ -1,0 +1,7 @@
+Map Selection:
+
+For this analysis, data from the island of Oahu in the State of Hawaii was exported from the Open Street Map ('OSM') database.
+
+http://www.openstreetmap.org/#map=10/21.4901/-158.0795
+
+Having lived on Oahu for several years, I was interested in performing an analysis on the area. Perhaps I will learn a something new about the island!

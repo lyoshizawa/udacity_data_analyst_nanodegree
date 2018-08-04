@@ -1,0 +1,18 @@
+Resources Used
+
+https://stackoverflow.com/questions/6777485/modifying-a-python-dict-while-iterating-over-it
+https://stackoverflow.com/questions/7872838/one-line-if-condition-assignment
+
+https://docs.python.org/3/tutorial/datastructures.html
+
+https://link.springer.com/referenceworkentry/10.1007%2F978-1-4419-9863-7_233
+
+http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.RidgeClassifier.html
+http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+http://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html
+http://scikit-learn.org/stable/modules/generated/sklearn.cluster.KMeans.html
+http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+http://scikit-learn.org/stable/modules/cross_validation.html
+http://scikit-learn.org/stable/modules/feature_selection.html
+http://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectKBest.html
+http://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedShuffleSplit.html

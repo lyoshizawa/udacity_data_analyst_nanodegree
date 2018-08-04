@@ -1,0 +1,160 @@
+---
+title: 'Lesson 6: Problem Set Explore 2 Variables'
+output:
+  html_document: default
+  html_notebook: default
+---
+
+1. Quiz: price vs. x
+
+```{r}
+library(ggplot2)
+data(diamonds)
+
+ggplot(data=diamonds, aes(x=x, y= price)) +
+  geom_point()
+```
+
+
+3. Quiz: Correlations
+```{r}
+cor.test(diamonds$price, diamonds$x)
+cor.test(diamonds$price, diamonds$y)
+cor.test(diamonds$price, diamonds$z)
+```
+
+4. Quiz: price vs. depth
+```{r}
+ggplot(data = diamonds, aes(x = depth, y = price)) + 
+  geom_point()
+```
+
+5: Quiz - Adjustments price vs depth
+# Change the code to make the transparency of the
+# points to be 1/100 of what they are now and mark
+# the x-axis every 2 units.
+
+```{r}
+ggplot(data = diamonds, aes(x = depth, y = price)) + 
+  geom_point(alpha= 1/100) +
+  scale_x_continuous(breaks =seq(43,79,2))
+```
+
+7. Quiz: Correlation - price and depth
+```{r}
+cor.test(diamonds$depth, diamonds$price)
+```
+
+8. Quiz - price vs. carat
+# Create a scatterplot of price vs carat
+# and omit the top 1% of price and carat
+# values.
+
+```{r}
+#quantile(diamonds$carat, 0.99)
+
+diamonds.sub <- subset(diamonds, carat < quantile(diamonds$carat, 0.99) | 
+                         price < quantile(diamonds$price, 0.99))
+ggplot(data=diamonds.sub, aes(x=carat, y=price)) +
+  geom_point()
+```
+
+
+9: Quiz - price vs. volume
+```{r}
+diamonds$volume <- diamonds$x * diamonds$y * diamonds$z
+ggplot(data = diamonds, aes(x=volume, y=price)) +
+  geom_point()
+```
+
+11. Quiz - Correlations on Subsets
+```{r}
+diamonds.corsub <- subset(diamonds, volume > 0 & volume <= 800)
+cor.test(diamonds.corsub$price, diamonds.corsub$volume)
+```
+
+12. Quiz: Adjustments - price vs volume
+```{r}
+ggplot(data=diamonds.corsub, aes(x=volume, y=price)) +
+  geom_point(alpha = 1/50) +
+  geom_smooth()
+```
+
+
+13. Quiz: Mean Price by Clarity
+# Use the function dplyr package
+# to create a new data frame containing
+# info on diamonds by clarity.
+
+# Name the data frame diamondsByClarity
+
+# The data frame should contain the following
+# variables in this order.
+
+#       (1) mean_price
+#       (2) median_price
+#       (3) min_price
+#       (4) max_price
+#       (5) n
+
+```{r}
+library(dplyr)
+diamondsByClarity <- diamonds %>%
+  group_by(clarity) %>%
+  summarise(mean_price = mean(price),
+            median_price = median(price),
+            min_price = min(price),
+            max_price = max(price),
+            n = n())
+
+head(diamondsByClarity)
+            
+```
+
+
+14. Quiz: Bar Charts of Mean Price
+```{r}
+library(gridExtra)
+diamonds_by_clarity <- group_by(diamonds, clarity)
+diamonds_mp_by_clarity <- summarise(diamonds_by_clarity, 
+                                    mean_price = mean(price))
+
+diamonds_by_color <- group_by(diamonds, color)
+diamonds_mp_by_color <- summarise(diamonds_by_color, 
+                                  mean_price = mean(price))
+
+d_by_clarity <- ggplot(data=diamonds_mp_by_clarity, aes(x=clarity, y=mean_price)) +
+  geom_bar(stat='identity')
+
+
+d_by_color <- ggplot(data=diamonds_mp_by_color, aes(x=color, y=mean_price)) +
+  geom_bar(stat='identity')
+
+grid.arrange(d_by_clarity, d_by_color)
+
+```
+
+
+
+15. Quiz: Trends in Mean Price
+
+mean price decreases as clarity improves
+mean price increases as color gets worse
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
