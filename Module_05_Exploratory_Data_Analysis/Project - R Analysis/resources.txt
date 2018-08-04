@@ -1,0 +1,7 @@
+Resources Used:
+
+http://ggplot2.tidyverse.org/reference/
+
+http://www.sthda.com/english/wiki/visualize-correlation-matrix-using-correlogram
+
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists

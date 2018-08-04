@@ -1,0 +1,79 @@
+Data Types Summary
+
+Quantitative
+Continuous: time, height, weight, money, interest rates, temperature
+Discrete: units sold, number of languages spoken, number of emails you received yesterday
+
+Qualitative
+Categorical: gender, hair color, country, industry, cat bree
+
+Ordinal: Rankings, survey questions like “How do you feel about cats?"
+       1. hate them
+       2. negative
+       3. neutral
+       4. positive
+       5. love them with all my being
+
+Visual Encodings
+
+Position X
+Position Y
+
+Retinal Variables
+	Ordered Data
+		Size
+		Orientation
+		Color Saturation
+
+	Nominal Data
+		Color Hue
+		Shape
+		Texture
+
+
+Chart Selection
+1.	Whats the Data Type?
+		Continuous
+		Categorical
+2.	How many dimensions?
+		1
+		2
+		3
+
+http://www.perceptualedge.com/articles/ie/the_right_graph.pdf
+http://www.perceptualedge.com/articles/misc/Graph_Selection_Matrix.pdf
+http://www.perceptualedge.com/articles/visual_business_intelligence/rules_for_using_color.pdf
+http://extremepresentation.typepad.com/.shared/image.html?/photos/uncategorized/choosing_a_good_chart.jpg
+
+bar chart - highlights individual values, supports comparisons, and can show rankings or deviations
+
+boxplot - shows distributions and quantiles, especially useful when comparing distributions
+
+pie chart - shows part-to-whole relationship and best suited for one category; poor for making comparisons
+
+stacked bar chart - shows part-to-whole relationship and best suited for showing composition within categories and totals
+
+bubble chart - shows how three or more sets of values vary; shows correlation
+
+line chart - shows overall changes and patterns, usually over equally spaced intervals of time
+
+map - values are encoded on physical locations and patterns may be drawn by comparing locations
+
+scatterplot - shows how two pair sets of values (for example height and shoe size) vary; shows correlation
+
+
+Rule #1 - If you want different objects of the same color in a table or graph to look the same, make sure that the background—the color that surrounds them—is consistent.
+Rule #2 - If you want objects in a table or graph to be easily seen, use a background color that contrasts sufficiently with the object.
+Rule #3 - Use color only when needed to serve a particular communication goal.
+Rule #4 - Use different colors only when they correspond to differences of meaning in the data.
+Rule #5 - Use soft, natural colors to display most information and bright and/or dark colors to highlight information that requires greater attention.
+Rule #6 - When using color to encode a sequential range of quantitative values, stick with a single hue (or a small set of closely related hues) and vary intensity from pale colors for low values to increasingly darker and brighter colors for high values.
+Rule #7 - Non-data components of tables and graphs should be displayed just visibly enough to perform their role, but no more so, for excessive salience could cause them to distract attention from the data.
+Rule #8 - To guarantee that most people who are colorblind can distinguish groups of data that are color coded, avoid using a combination of red and green in the same display.
+Rule #9 - Avoid using visual effects in graphs.
+
+
+Data Ink ratio should be high
+- Most of the ink used should be for the data, not for excess fluff/design
+
+Lie Factor = (size of effect in graphic) / (size of effect in data)
